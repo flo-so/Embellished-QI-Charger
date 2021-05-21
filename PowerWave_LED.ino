@@ -1,7 +1,9 @@
 /*
+  The Board: 
+  - Digispark ATTiny 85
   The circuit:
-  - TPO of QI-Charger connected to analog Input "sensorPin"
-  - LED anode (long leg) attached to PWM Output "ledPin"
+  - TPO (Total Power Output) of QI-Charger connected to analog Input "sensorPin"
+  - LED anode (long leg) attached to PWM Output "ledPin" (don't forget the resistor to control max. current)
     cathode (short leg) attached to ground
   - Debug LED onboard LED digital output "debugLedPin"
 */
@@ -26,7 +28,7 @@ const int schnellLadenPwmMax = 208;
 const int schnellLadenDelay = 10;
 
 //Variable
-int sensorValue; // variable to store the value coming from the sensor
+int sensorValue;
 bool laden = false;
 
 void setup() {
